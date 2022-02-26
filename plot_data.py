@@ -3,7 +3,7 @@ import json
 import numpy as np
 import pandas as pd
 
-data = pd.read_csv('online_comparison_5.csv')
+data = pd.read_csv('expirements_results/online_comparison_5.csv')
 stds = np.array(range(1000, 4010, 1000))
 # plt.ticklabel_format(style='plain')
 # number_of_machines = list(range(20,90,20))
