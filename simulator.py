@@ -309,7 +309,7 @@ def run_experiments(algorithm, data_list, experiment_name, opt=False):
 def main():
     recurrences = 1
     experiment_name = 'test'
-    while experiment_name + '.json' in os.listdir('json_results'):
+    while experiment_name + '.json' in os.listdir('expirements_results/json_results'):
         if experiment_name[-1].isdigit():
             experiment_name = experiment_name[:-1] + str(int(experiment_name[-1]) + 1)
         else:
@@ -333,7 +333,7 @@ def main():
     plt.xlabel('Number of jobs')
     plt.legend()
     plt.savefig(f'tests_figures/{experiment_name}.png')
-    with open(file=f'json_results/{experiment_name}.json', mode='w') as f:
+    with open(file=f'expirements_results/json_results/{experiment_name}.json', mode='w') as f:
         json.dump(fp=f, obj=all_results)
 
 
